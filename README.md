@@ -6,11 +6,11 @@ you liked, it suggests similar titles using TF-IDF over each film's content
 
 ## Credit / Foundation
 Adapted from: <PASTE THE EXACT URL OF THE NOTEBOOK/REPO YOU FORKED>
-Dataset: TMDB 5000 Movie Dataset — <PASTE EXACT KAGGLE URL>
+Dataset: TMDB 5000 Movie Dataset — https://www.kaggle.com/datasets/tmdb/tmdb-5000-movie-dataset
 
 ## My modifications
-- <Modification 1 — e.g., added a Gradio GUI>
-- <Modification 2 — e.g., enriched feature soup with cast/director>
+- Added a Gradio GUI with a movie dropdown and a results slider
+- Display similarity score (%) alongside each recommendation
 
 ## Setup
 ```bash

@@ -11,7 +11,7 @@ approach over the TMDB 5000 Movie Dataset (Kaggle). Put the EXACT URL
 of the specific notebook/repo you forked here, and in your README and
 references page:
     FOUNDATION: <paste the exact URL you used>
-    DATASET:    <paste the exact Kaggle dataset URL>
+    DATASET:    https://www.kaggle.com/datasets/tmdb/tmdb-5000-movie-dataset
 
 Run:
     pip install -r requirements.txt
@@ -87,8 +87,8 @@ def recommend(title: str, df: pd.DataFrame, sim_matrix, top_n: int = 5):
     idx = matches.index[0]
     scores = list(enumerate(sim_matrix[idx]))
     scores = sorted(scores, key=lambda x: x[1], reverse=True)
-    top = [i for i, _ in scores if i != idx][:top_n]
-    return [df.iloc[i]["title"] for i in top]
+    top = [(i, s) for i, s in scores if i != idx][:top_n]
+    return [(df.iloc[i]["title"], round(s * 100, 1)) for i, s in top]
 
 
 # ----------------------------------------------------------------------
@@ -106,7 +106,7 @@ def main():
             return "Pick a movie first."
         recs = recommend(title, df, sim, top_n=int(count))
         if isinstance(recs, list):
-            return "\n".join(f"{i+1}. {t}" for i, t in enumerate(recs))
+            return "\n".join(f"{i+1}. {t} ({s}% match)" for i, (t, s) in enumerate(recs))
         return recs
 
     demo = gr.Interface(
