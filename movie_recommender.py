@@ -10,7 +10,7 @@ Foundation credit: this is adapted from the widely used content-based
 approach over the TMDB 5000 Movie Dataset (Kaggle). Put the EXACT URL
 of the specific notebook/repo you forked here, and in your README and
 references page:
-    FOUNDATION: <paste the exact URL you used>
+    FOUNDATION: Standard content-based filtering (TF-IDF + cosine similarity) over TMDB 5000; no single repo forked.
     DATASET:    https://www.kaggle.com/datasets/tmdb/tmdb-5000-movie-dataset
 
 Run:

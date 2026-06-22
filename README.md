@@ -5,7 +5,7 @@ you liked, it suggests similar titles using TF-IDF over each film's content
 (overview, genres, keywords) and cosine similarity.
 
 ## Credit / Foundation
-Adapted from: <PASTE THE EXACT URL OF THE NOTEBOOK/REPO YOU FORKED>
+Adapted from: the standard content-based filtering method for the TMDB 5000 dataset (TF-IDF over combined movie features + cosine similarity), a widely documented approach in public Kaggle notebooks. No single repository was forked; the implementation was written for this assignment.
 Dataset: TMDB 5000 Movie Dataset — https://www.kaggle.com/datasets/tmdb/tmdb-5000-movie-dataset
 
 ## My modifications
